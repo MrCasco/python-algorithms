@@ -1,29 +1,3 @@
-"""
-import math
-
-values = {}
-values.update(divide(num[0]))
-i = 1
-while i < len(num):
-    values.update(divide(num[:i]))
-    unique = set(values.values())
-    for val in unique:
-        if values.values().count(val) > 1:
-            return False
-    i += 1
-
-
-def divide(num):
-    if len(num)-1 == 0:
-        return {num:num}
-    i = 0
-    lgt = len(num)
-    values = {}
-    while i < lgt:
-        values[num[i+1:]] = math.prod([int(x) for digit in num[i+1:]])
-        i += 1
-    return values
-"""
 import numpy
 
 def colorful_number(num):
